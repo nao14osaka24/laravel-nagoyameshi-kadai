@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\admin\UserController;
+use Illuminate\Auth\Events\Verified;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +29,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth:admin
 });
 
 Route::get('/', [UserController::class, 'index']);
+
+
+
+Route::resource('categories', CategoryController::class)->middleware(['auth', 'verified']);
