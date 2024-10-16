@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\admin\UserController;
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\RestaurantControllerController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Auth\Events\Verified;
 
 /*
