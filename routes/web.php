@@ -20,7 +20,7 @@ use Illuminate\Auth\Events\Verified;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
 
@@ -30,7 +30,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth:admin
     Route::get('home', [Admin\HomeController::class, 'index'])->name('home');
 });
 
-Route::get('/', [UserController::class, 'index']);
+//エラー　Symfony\Component\HttpFoundation\Response::setContent(): Argument #1 ($content) must be of type ?string, Illuminate\View\Factory given, called in C:\xampp\htdocs\laravel-nagoyameshi\vendor\laravel\framework\src\Illuminate\Http\Response.php on line 72
+//Route::get('/', [UserController::class, 'index']);
 
 
 
